@@ -44,13 +44,13 @@ public class Exercise06 {
 		command.add("ls");
 		command.add("-la");
 		
-		ProcessBuilder pbJavaHelp = new ProcessBuilder(command);
-		pbJavaHelp.directory(upperFolder);
-		pbJavaHelp.redirectOutput(myouput);
+		ProcessBuilder pbLsLa = new ProcessBuilder(command);
+		pbLsLa.directory(upperFolder);
+		pbLsLa.redirectOutput(myouput);
 		
 		try {
 			long startTime = System.currentTimeMillis();
-			Process p = pbJavaHelp.start();
+			Process p = pbLsLa.start();
 			int exitStatus = p.waitFor();
 			long finishTime = System.currentTimeMillis();
 			
