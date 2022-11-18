@@ -41,11 +41,15 @@ public class Exercise06 {
 		File upperFolder = new File("/");
 		
 		List<String> command = new ArrayList<String>();
-		command.add("ls");
-		command.add("-la");
+//		command.add("ls");
+//		command.add("-la");
+		
+		command.add("java");
+		command.add("--help");
 		
 		ProcessBuilder pbLsLa = new ProcessBuilder(command);
 		pbLsLa.directory(upperFolder);
+		pbLsLa.redirectErrorStream(true);
 		pbLsLa.redirectOutput(myouput);
 		
 		try {
